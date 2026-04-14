@@ -8,8 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "edu.pe.cibertec.stepdefinitions",
-        plugin = {"pretty"},
-        tags = "not @ignore"
+        plugin = {"pretty"}
 )
 public class RunnerTest {
 }
