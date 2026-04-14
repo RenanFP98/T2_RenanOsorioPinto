@@ -32,7 +32,6 @@ public class AgregarAlCarrito implements Task {
                 Enter.theValue(producto).into(BusquedaPage.SEARCH_INPUT).thenHit(Keys.ENTER),
                 WaitUntil.the(CarritoPage.ADD_TO_CART_BTN, WebElementStateMatchers.isClickable()).forNoMoreThan(10).seconds(),
                 Click.on(CarritoPage.ADD_TO_CART_BTN),
-                // ESPERA CORREGIDA: Espera a que aparezca el banner verde de éxito
                 WaitUntil.the(Target.the("alerta de éxito").locatedBy(".alert-success"),
                         WebElementStateMatchers.isVisible()).forNoMoreThan(5).seconds()
         );

@@ -32,11 +32,10 @@ public class CarritoStepDefinitions {
     @And("navigates to the cart")
     public void navegarAlCarrito() {
         OnStage.theActorInTheSpotlight().attemptsTo(
-                // Forzamos el clic con JavaScript para que el menú se abra sí o sí
+
                 WaitUntil.the(CarritoPage.CART_BUTTON, WebElementStateMatchers.isClickable()),
                 JavaScriptClick.on(CarritoPage.CART_BUTTON),
 
-                // Esperamos a que el enlace interno sea visible antes de clickearlo
                 WaitUntil.the(CarritoPage.VIEW_CART_LINK, WebElementStateMatchers.isVisible()),
                 Click.on(CarritoPage.VIEW_CART_LINK)
         );

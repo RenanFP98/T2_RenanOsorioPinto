@@ -12,7 +12,6 @@ public class ResultadosDeBusqueda implements Question<Collection<String>> {
 
     @Override
     public Collection<String> answeredBy(Actor actor) {
-        // Obtenemos la lista de textos de los elementos encontrados
         return Text.ofEach(BusquedaPage.PRODUCT_RESULTS)
                 .answeredBy(actor)
                 .stream()
